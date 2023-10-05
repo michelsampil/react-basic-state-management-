@@ -13,7 +13,7 @@ function App() {
       <StateEffectCalculator />
       <h2>Reducer Calculator</h2>
       <ReducerCalculator />
-      <h2>Reducer Calculator</h2>
+      <h2>Reducer Payload Calculator</h2>
       <ReducerPayloadCalculator />
     </div>
   );
