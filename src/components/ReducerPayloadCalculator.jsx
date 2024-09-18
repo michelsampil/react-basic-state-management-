@@ -24,6 +24,7 @@ export const ReducerPayloadCalculator = () => {
   const [state, dispatch] = useReducer(reducer, { a: 1, b: 2 });
   const { a, b } = state;
   const c = a + b;
+
   // useRef is a hook that let's us access to input current value without
   // the need of save it in a state every time.
   // As useState, we can set a 👇 initial value.
