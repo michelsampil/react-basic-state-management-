@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-export const StateCalculatorDefault = () => {
+export const TwoStatesCalculator = () => {
   const [a, setA] = useState(1);
   const [b, setB] = useState(2);
-  const [c, setC] = useState(a + b);
+  const c = a + b;
 
   const onClickHandler = (num) => {
     if (num === "A") {
-      setA(updatedA);
+      setA(a + 1);
     } else {
-      setB(updatedB);
+      setB(b + 1);
     }
   };
 
@@ -21,7 +21,3 @@ export const StateCalculatorDefault = () => {
     </div>
   );
 };
-
-// 🤨 Wondering why it didn't work?
-// This component is not displaying updates in C because default state
-// values are assigned on the first render

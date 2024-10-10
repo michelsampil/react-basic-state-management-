@@ -1,15 +1,19 @@
 import { useState } from "react";
 
-export const StateCalculatorDefault = () => {
+export const StateOnStateCalculatorFixed = () => {
   const [a, setA] = useState(1);
   const [b, setB] = useState(2);
   const [c, setC] = useState(a + b);
 
   const onClickHandler = (num) => {
     if (num === "A") {
+      const updatedA = a + 1;
       setA(updatedA);
+      setC(updatedA + b); //👈 not using the recently updated state value
     } else {
+      const updatedB = b + 1;
       setB(updatedB);
+      setC(a + updatedB); //👈 not using the recently updated state value
     }
   };
 
@@ -22,6 +26,6 @@ export const StateCalculatorDefault = () => {
   );
 };
 
-// 🤨 Wondering why it didn't work?
-// This component is not displaying updates in C because default state
-// values are assigned on the first render
+// 😎 The trick is that we aren't using the updated C value
+// we are storing the value on a const which will be saved
+// the value instantly and use that value to set C new state.
