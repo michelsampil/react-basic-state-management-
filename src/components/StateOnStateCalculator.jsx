@@ -9,7 +9,7 @@ export const StateOnStateCalculator = () => {
     if (num === "A") {
       setA(a + 1); // Trying to update based on 'a'
       setC(a + b); // Updating 'c' immediately based on 'a' and 'b'
-      // Note: Don't update states immediately based on another state update.
+      // Note: 🔺Don't update states immediately based on another state update.
     } else {
       setB(b + 1);
       setC(a + b); // Same issue
@@ -24,3 +24,11 @@ export const StateOnStateCalculator = () => {
     </div>
   );
 };
+
+// 🤨 Wondering why it didn't work?
+//
+// Note: The issue with this code arises because React state
+// updates are asynchronous. When we update a or b using
+// setA or setB, the new values are not immediately available
+// in the subsequent lines of code. to see the fix please check
+// the StateOnStateFixed component inside de component folder.

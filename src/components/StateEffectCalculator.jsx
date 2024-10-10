@@ -6,8 +6,9 @@ export const StateEffectCalculator = () => {
   const [c, setC] = useState(a + b);
 
   useEffect(() => {
-    setC(a + b);
-  }, [a, b]);
+    setC(a + b); // 👈
+  }, [a, b]); // Every time a or b updates the
+  // function will be executed (setC(a+b))
 
   const onClickHandler = (num) => {
     if (num === "A") {
