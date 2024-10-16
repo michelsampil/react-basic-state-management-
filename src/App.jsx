@@ -1,6 +1,6 @@
 import "./App.css";
 import { ReducerCalculator } from "./components/ReducerCalculator";
-import { StateCalculatorDefault } from "./components/StateCalculator";
+import { StateCalculatorDefault } from "./components/StateCalculatorDefault";
 import { StateEffectCalculator } from "./components/StateEffectCalculator";
 import { ReducerPayloadCalculator } from "./components/ReducerPayloadCalculator";
 import { StateOnStateCalculator } from "./components/StateOnStateCalculator";

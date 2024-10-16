@@ -27,8 +27,8 @@ export const StateOnStateCalculator = () => {
 
 // 🤨 Wondering why it didn't work?
 //
-// Note: The issue with this code arises because React state
+// The issue with this code arises because React state
 // updates are asynchronous. When we update a or b using
 // setA or setB, the new values are not immediately available
-// in the subsequent lines of code. to see the fix please check
+// in the subsequent lines of code. to see a possible fix please check
 // the StateOnStateFixed component inside de component folder.

@@ -4,11 +4,16 @@ export const StateCalculatorDefault = () => {
   const [a, setA] = useState(1);
   const [b, setB] = useState(2);
   const [c, setC] = useState(a + b);
+  const [tasks, setTasks] = useState(["dormir", "comer", "cortar el pasto"]);
+
+  console.log("Tasks: ", tasks);
 
   const onClickHandler = (num) => {
     if (num === "A") {
+      const updatedA = a + 1;
       setA(updatedA);
     } else {
+      const updatedB = b + 1;
       setB(updatedB);
     }
   };
