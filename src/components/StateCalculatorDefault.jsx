@@ -15,8 +15,6 @@ export const StateCalculatorDefault = () => {
     }
   };
 
-  const CreateUser = async () => {};
-
   return (
     <div className="App">
       {a} + {b} = {c}
